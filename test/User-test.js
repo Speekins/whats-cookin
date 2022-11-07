@@ -34,6 +34,17 @@ describe('User', () => {
 
   it('should have a list of favorite recipes', () => {
     user.addRecipeToFavorites(recipe)
+    user.addRecipeToFavorites(recipe2)
+
+    user.removeRecipeFromFavorites(recipe.id)
+    expect(user.favoriteRecipes[0]).to.eql(recipe2)
+
+    user.removeRecipeFromFavorites(recipe2.id)
+    expect(user.favoriteRecipes).to.eql([])
+  })
+
+  it('should be able to remove recipe from favorites', () => {
+    user.addRecipeToFavorites(recipe)
     
     expect(user.favoriteRecipes[0]).to.eql(recipe)
   })
