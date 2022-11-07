@@ -10,6 +10,10 @@ body {
   height: 100vh;
 }
 
+label {
+  display: none;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -187,7 +191,7 @@ td {
   border-bottom: 2px solid #c84b31;
 }
 
-#table-select {
+.table-select {
   width: 50%;
   padding: 2px;
 }
@@ -319,7 +323,7 @@ th {
   transition-duration: 200ms;
 }
 
-.recipe-tile>h4 {
+.recipe-tile>p {
   flex-basis: 20%;
   font-family: 'Work Sans', sans-serif;
   color: #161616;

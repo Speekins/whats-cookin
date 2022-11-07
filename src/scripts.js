@@ -44,8 +44,6 @@ const pantryParent = document.querySelector('.pantry-parent')
 const logoImage = document.getElementById('logo')
 const modalCookButton = document.getElementById("modal-cook-button")
 const table = document.querySelector('table')
-const tableSelect = document.querySelector('#table-select')
-const tableButtonAdd = document.querySelector('#table-button-add')
 let filter = document.getElementById('filter')
 let tileNodes = allRecipesContainer.childNodes
 
@@ -62,9 +60,9 @@ function fetchData(urls) {
     })
     .catch(error => {
       console.log("Fetch error: ", error)
-      if(error instanceof TypeError) {
+      if (error instanceof TypeError) {
         alert("Sorry, there is an issue with our data server. Please try again later. 🙈")
-      } else if(error instanceof ReferenceError) {
+      } else if (error instanceof ReferenceError) {
         alert("There's an issue on our end, we're working on it. 👷")
       } else {
         alert("An error occured, please try again later.")
@@ -226,11 +224,11 @@ modalCookButton.addEventListener("click", (e) => {
 
 table.addEventListener('click', (event) => {
   if (event.target.id !== 'table-button-add') { return }
-    let inputValue = Number(event.target.parentNode.querySelector('select').value)
-    let id = Number(event.target.classList.value)
-    let restructuredPantryObj = structurePost(user.id, id, inputValue)
-    postData(restructuredPantryObj, 'http://localhost:3001/api/v1/users')
-      .then(() => fetchUsers())
+  let inputValue = Number(event.target.parentNode.querySelector('select').value)
+  let id = Number(event.target.classList.value)
+  let restructuredPantryObj = structurePost(user.id, id, inputValue)
+  postData(restructuredPantryObj, 'http://localhost:3001/api/v1/users')
+    .then(() => fetchUsers())
 })
 
 // ---------------------------DOM UPDATING---------------------------
@@ -241,13 +239,13 @@ function displayWelcomeMessage() {
 
 function createRecipeTile(recipe) {
   allRecipesContainer.innerHTML +=
-    `<div class="recipe-tile" id=${recipe.id}>
+    `<li class="recipe-tile" id=${recipe.id}>
       <div class="tile-image" style="background-image: url(${recipe.image})" alt="${recipe.name}">
         <img class="tile-bookmarks bookmark-nodes" id=${recipe.id} src="./images/bookmark-tiles-unsaved.png" aria-label="bookmark ${recipe.name}">
       </div>
       <h3>${recipe.name}</h3>
-      <h4>${recipe.tags.join(', ')}</h4>
-    </div>`
+      <p>${recipe.tags.join(', ')}</p>
+    </li>`
 }
 
 function displayRecipeTiles(recipeArray) {
@@ -489,26 +487,26 @@ function cookRecipe(recipe) {
   })
   for (let i = 0; i < bodies.length; i++) {
     postData(bodies[i], 'http://localhost:3001/api/v1/users')
-    .then(() => {
-      if (i === bodies.length - 1) {
-        MicroModal.close("modal-1")
-        fetchUsers()
-      }
-    })
-    .catch(err => console.log(err))
+      .then(() => {
+        if (i === bodies.length - 1) {
+          MicroModal.close("modal-1")
+          fetchUsers()
+        }
+      })
+      .catch(err => console.log(err))
   }
 }
 
 function fetchUsers() {
   fetch('http://localhost:3001/api/v1/users')
-  .then(response => response.json())
-  .then(data => usersData = data)
-  .then(() => {
-    user.pantry = user.getAllPantryIngredients(updateUser().pantry, recipeRepository.allIngredients)
-    displayPantryView()
-    displayMyRecipes()
-  })
-  .catch(err => console.log(err));
+    .then(response => response.json())
+    .then(data => usersData = data)
+    .then(() => {
+      user.pantry = user.getAllPantryIngredients(updateUser().pantry, recipeRepository.allIngredients)
+      displayPantryView()
+      displayMyRecipes()
+    })
+    .catch(err => console.log(err))
 }
 
 function displayPantryView() {
@@ -539,7 +537,8 @@ function displayPantryView() {
         <td id="table-col-name">${pantryItem.name}</td>
         <td id="table-col-quantity">${pantryItem.amount}</td>
         <td id="table-col-select">
-          <select id="table-select">
+          <label for="table-select-${pantryItem.id}">select amount of ${pantryItem.name} to add</label>
+          <select class="table-select" id="table-select-${pantryItem.id}">
             <option>0</option>
             <option>1</option>
             <option>5</option>
