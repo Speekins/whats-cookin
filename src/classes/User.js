@@ -1,4 +1,3 @@
-//const allData = require("../scripts")
 const ingredientsData = require("../data/ingredients")
 const recipeData = require("../data/recipes")
 
