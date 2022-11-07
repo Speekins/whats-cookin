@@ -246,7 +246,7 @@ function displayWelcomeMessage() {
 
 function createRecipeTile(recipe) {
   allRecipesContainer.innerHTML +=
-    `<div class="recipe-tile" id=${recipe.id}>
+    `<div tabindex="0" class="recipe-tile" id=${recipe.id}>
       <div class="tile-image" style="background-image: url(${recipe.image})" alt="${recipe.name}">
         <img class="tile-bookmarks bookmark-nodes" id=${recipe.id} src="./images/bookmark-tiles-unsaved.png" aria-label="bookmark ${recipe.name}">
       </div>
