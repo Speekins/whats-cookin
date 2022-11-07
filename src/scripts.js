@@ -136,6 +136,13 @@ allRecipesContainer.addEventListener("keypress", function(event) {
 
 closeModalButton.addEventListener("click", () => MicroModal.close("modal-1"))
 
+closeModalButton.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault()
+    event.target.click()
+  }
+})
+
 modalSaveRecipeButton.addEventListener("click", event => {
   let targetIsUnsaved = (event.target.src.includes('unsaved'))
 
@@ -145,6 +152,13 @@ modalSaveRecipeButton.addEventListener("click", event => {
   } else {
     event.target.src = './images/bookmark-unsaved.png'
     removeRecipeFromFavorites(event)
+  }
+})
+
+modalSaveRecipeButton.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault()
+    event.target.click()
   }
 })
 
