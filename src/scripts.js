@@ -104,6 +104,13 @@ function initUser() {
 
 // ---------------------------EVENT LISTENERS---------------------------
 
+document.addEventListener('keypress', event => {
+  if(event.key === "Enter") {
+    event.preventDefault()
+    event.target.click()
+  }
+})
+
 filterClearButton.addEventListener('click', clearFilterByTag)
 
 window.addEventListener('load', () => {
@@ -123,7 +130,6 @@ allRecipesContainer.addEventListener("click", event => {
       removeTileFromDisplay(event)
     }
   }
-
   let targetObject = recipeRepository.recipeList.find(recipe => recipe.id == event.target.parentNode.id)
   displayModal(targetObject)
 })
@@ -245,7 +251,7 @@ function createRecipeTile(recipe) {
       <div class="tile-image" style="background-image: url(${recipe.image})" alt="${recipe.name}">
         <img class="tile-bookmarks bookmark-nodes" id=${recipe.id} src="./images/bookmark-tiles-unsaved.png" aria-label="bookmark ${recipe.name}">
       </div>
-      <h3>${recipe.name}</h3>
+      <h3 tabindex="0">${recipe.name}</h3>
       <h4>${recipe.tags.join(', ')}</h4>
     </div>`
 }
