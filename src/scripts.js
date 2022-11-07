@@ -104,6 +104,13 @@ function initUser() {
 
 // ---------------------------EVENT LISTENERS---------------------------
 
+function addEnterEvent(event) {
+  if (event.key === "Enter") {
+    event.preventDefault()
+    event.target.click()
+  }
+}
+
 filterClearButton.addEventListener('click', clearFilterByTag)
 
 window.addEventListener('load', () => {
@@ -127,21 +134,11 @@ allRecipesContainer.addEventListener("click", event => {
   displayModal(targetObject)
 })
 
-allRecipesContainer.addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
-    event.preventDefault()
-    event.target.click()
-  }
-})
+allRecipesContainer.addEventListener("keypress", addEnterEvent)
 
 closeModalButton.addEventListener("click", () => MicroModal.close("modal-1"))
 
-closeModalButton.addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
-    event.preventDefault()
-    event.target.click()
-  }
-})
+closeModalButton.addEventListener("keypress", addEnterEvent)
 
 modalSaveRecipeButton.addEventListener("click", event => {
   let targetIsUnsaved = (event.target.src.includes('unsaved'))
@@ -155,12 +152,7 @@ modalSaveRecipeButton.addEventListener("click", event => {
   }
 })
 
-modalSaveRecipeButton.addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
-    event.preventDefault()
-    event.target.click()
-  }
-})
+modalSaveRecipeButton.addEventListener("keypress", addEnterEvent)
 
 const searchBarEvents = ['keyup', 'search']
 searchBarEvents.forEach(index =>
@@ -180,7 +172,11 @@ searchBarEvents.forEach(index =>
 
 myRecipesButton.addEventListener("click", displayMyRecipes)
 
+myRecipesButton.addEventListener("keypress", addEnterEvent)
+
 allRecipesButton.addEventListener("click", displayAllRecipes)
+
+allRecipesButton.addEventListener("keypress", addEnterEvent)
 
 filter.addEventListener('input', event => {
   enableFilterClearButton(true)
@@ -258,12 +254,7 @@ table.addEventListener('click', (event) => {
   } else { return }
 })
 
-table.addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
-    event.preventDefault()
-    event.target.click()
-  }
-})
+table.addEventListener("keypress", addEnterEvent)
 
 // ---------------------------DOM UPDATING---------------------------
 
