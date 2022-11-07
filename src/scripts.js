@@ -104,12 +104,12 @@ function initUser() {
 
 // ---------------------------EVENT LISTENERS---------------------------
 
-function addEnterEvent(event) {
-  if (event.key === "Enter") {
+document.addEventListener('keypress', event => {
+  if(event.key === "Enter") {
     event.preventDefault()
     event.target.click()
   }
-}
+})
 
 filterClearButton.addEventListener('click', clearFilterByTag)
 
@@ -134,11 +134,7 @@ allRecipesContainer.addEventListener("click", event => {
   displayModal(targetObject)
 })
 
-allRecipesContainer.addEventListener("keypress", addEnterEvent)
-
 closeModalButton.addEventListener("click", () => MicroModal.close("modal-1"))
-
-closeModalButton.addEventListener("keypress", addEnterEvent)
 
 modalSaveRecipeButton.addEventListener("click", event => {
   let targetIsUnsaved = (event.target.src.includes('unsaved'))
@@ -151,8 +147,6 @@ modalSaveRecipeButton.addEventListener("click", event => {
     removeRecipeFromFavorites(event)
   }
 })
-
-modalSaveRecipeButton.addEventListener("keypress", addEnterEvent)
 
 const searchBarEvents = ['keyup', 'search']
 searchBarEvents.forEach(index =>
@@ -172,11 +166,7 @@ searchBarEvents.forEach(index =>
 
 myRecipesButton.addEventListener("click", displayMyRecipes)
 
-myRecipesButton.addEventListener("keypress", addEnterEvent)
-
 allRecipesButton.addEventListener("click", displayAllRecipes)
-
-allRecipesButton.addEventListener("keypress", addEnterEvent)
 
 filter.addEventListener('input', event => {
   enableFilterClearButton(true)
@@ -253,8 +243,6 @@ table.addEventListener('click', (event) => {
       })
   } else { return }
 })
-
-table.addEventListener("keypress", addEnterEvent)
 
 // ---------------------------DOM UPDATING---------------------------
 
