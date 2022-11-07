@@ -87,8 +87,8 @@ header {
 }
 
 .header-buttons:hover {
-  border-bottom: 3px solid #c84b31;
-  color: #c84b31;
+  border-bottom: 3px solid #B6381E;
+  color: #B6381E;
   transition-duration: 200ms;
 }
 
@@ -254,7 +254,7 @@ th {
   justify-content: center;
   font-family: 'Libre Baskerville', serif;
   font-size: 1em;
-  background-color: #c95f49;
+  background-color: #B6381E;
   color: rgb(247, 243, 233);
   width: 30%;
   aspect-ratio: 1;
@@ -322,7 +322,7 @@ th {
 .recipe-tile>h4 {
   flex-basis: 20%;
   font-family: 'Work Sans', sans-serif;
-  color: #16161679;
+  color: #161616;
   font-size: 12px;
   font-weight: 300;
   padding: 5px;
@@ -405,8 +405,8 @@ select:focus {
 }
 
 .selected-view {
-  border-bottom: 3px solid #c84b31;
-  color: #c84b31
+  border-bottom: 3px solid #B6381E;
+  color: #B6381E
 }
 
 .disabled {
