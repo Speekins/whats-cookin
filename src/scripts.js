@@ -110,6 +110,8 @@ window.addEventListener('load', () => {
   fetchData([usersURL, recipesURL, ingredientsURL])
 })
 
+// tableSelect.addEventListener
+
 allRecipesContainer.addEventListener("click", event => {
   if (event.target.nodeName === "SECTION") { return }
   let viewingMyRecipes = myRecipesButton.classList.contains('selected-view')
@@ -237,6 +239,14 @@ table.addEventListener('click', (event) => {
       })
   } else { return }
 })
+
+table.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault()
+    event.target.click()
+  }
+})
+
 
 // ---------------------------DOM UPDATING---------------------------
 
