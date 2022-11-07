@@ -110,8 +110,6 @@ window.addEventListener('load', () => {
   fetchData([usersURL, recipesURL, ingredientsURL])
 })
 
-// tableSelect.addEventListener
-
 allRecipesContainer.addEventListener("click", event => {
   if (event.target.nodeName === "SECTION") { return }
   let viewingMyRecipes = myRecipesButton.classList.contains('selected-view')
@@ -125,9 +123,15 @@ allRecipesContainer.addEventListener("click", event => {
       removeTileFromDisplay(event)
     }
   }
-
   let targetObject = recipeRepository.recipeList.find(recipe => recipe.id == event.target.parentNode.id)
   displayModal(targetObject)
+})
+
+allRecipesContainer.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault()
+    event.target.click()
+  }
 })
 
 closeModalButton.addEventListener("click", () => MicroModal.close("modal-1"))
@@ -247,7 +251,6 @@ table.addEventListener("keypress", function(event) {
   }
 })
 
-
 // ---------------------------DOM UPDATING---------------------------
 
 function displayWelcomeMessage() {
@@ -256,11 +259,11 @@ function displayWelcomeMessage() {
 
 function createRecipeTile(recipe) {
   allRecipesContainer.innerHTML +=
-    `<div tabindex="0" class="recipe-tile" id=${recipe.id}>
+    `<div class="recipe-tile" id=${recipe.id}>
       <div class="tile-image" style="background-image: url(${recipe.image})" alt="${recipe.name}">
         <img class="tile-bookmarks bookmark-nodes" id=${recipe.id} src="./images/bookmark-tiles-unsaved.png" aria-label="bookmark ${recipe.name}">
       </div>
-      <h3>${recipe.name}</h3>
+      <h3 tabindex="0">${recipe.name}</h3>
       <h4>${recipe.tags.join(', ')}</h4>
     </div>`
 }
