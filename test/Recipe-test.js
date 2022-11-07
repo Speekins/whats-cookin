@@ -60,7 +60,8 @@ describe('Recipe', () => {
     expect(totalCost).to.equal("$177.76")
   })
 
-  // it.skip('should have no repeat ingredients', () => {
-  //   recipe
-  // })
+  it('should have no repeat ingredients', () => {
+    
+    expect(thaiChickenTenders.ingredients.length).to.equal(11)
+  })
 })
