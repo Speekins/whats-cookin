@@ -64,4 +64,9 @@ describe('Recipe', () => {
     
     expect(thaiChickenTenders.ingredients.length).to.equal(11)
   })
+
+  it('should have amounts from repeat ingredients compiled into one ingredient', () => {
+    expect(thaiChickenTenders.ingredients[0].amount).to.equal(4)
+    expect(thaiChickenTenders.ingredients[10].amount).to.equal(1.5)
+  })
 })
