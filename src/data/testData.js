@@ -114,7 +114,7 @@ const testIngredients = [
     id: 20081,
     name: "wheat flour",
     estimatedCostInCents: 142,
-    amount: 5,
+    amount: 1.5,
     unit: "cups"
   },
   {

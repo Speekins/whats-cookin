@@ -18,9 +18,7 @@ describe('Ingredient', () => {
     eggs = new Ingredient(ingredientInfo2, recipeInfo2)
   })
 
-  console.log('WHEAT FLOUR:', wheatFlour)
-  console.log('SODA:', bicarbonateOfSoda)
-  console.log('EGGS:', eggs)
+
 
   it('should be an instance of Ingredient', () => {
     expect(wheatFlour).to.be.an.instanceof(Ingredient)
