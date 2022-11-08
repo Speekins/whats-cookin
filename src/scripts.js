@@ -326,18 +326,29 @@ function displaySearchedRecipeTiles(searchedRecipes) {
 }
 
 function convertDecimal(amount) {
-  if (amount === 0.25) {
-    amount = "1/4"
-  } else if (amount === 0.3333333333333333) {
-    amount = "1/3"
-  } else if (amount === 0.5) {
-    amount = "1/2"
-  } else if (amount === 0.6666666666666666) {
-    amount = "2/3"
-  } else if (amount === 0.75) {
-    amount = "3/4"
+  let key = {
+    '0.125': '1/8',
+    '0.25': '1/4',
+    '0.3333333333333333': '1/3',
+    '0.5': '1/2',
+    '0.6666666666666666': '2/3',
+    '0.75': '3/4',
+    '1.25': '1 1/4',
+    '1.3333333333333333': '1 1/3',
+    '1.5': '1 1/2',
+    '1.75': '1 3/4',
+    '2.5': '2 1/2',
+    '2.75': '2 3/4',
+    '5.5': '5 1/2',
+    '6.333333333333333': '6 1/3',
+    '6.5': '6 1/2'
   }
-  return amount
+  if (!key[amount]) {
+    return amount
+  } else {
+    amount = key[amount]
+    return amount
+  }
 }
 
 function updateModal(targetObject) {
@@ -507,8 +518,8 @@ function cookRecipe(recipe) {
     let amount = ingredient.amount - (ingredient.amount * 2)
     return structurePost(user.id, ingredient.id, amount)
   })
-  for (let i = 0; i < bodies.length; i++) {
-    postData(bodies[i], 'http://localhost:3001/api/v1/users')
+  bodies.forEach((body, i) => {
+    postData(body, 'http://localhost:3001/api/v1/users')
       .then(() => {
         if (i === bodies.length - 1) {
           MicroModal.close("modal-1")
@@ -516,7 +527,7 @@ function cookRecipe(recipe) {
         }
       })
       .catch(err => console.log(err))
-  }
+  })
 }
 
 function fetchUsers() {
