@@ -4,13 +4,14 @@ import { ingredientsData, recipeData } from '../src/data/testData'
 import { expect } from 'chai'
 
 describe('Recipe', () => {
-  let recipeInfo, recipe, wheatFlour, bicarbonateOfSoda, eggs
+  let recipeInfo, recipe, wheatFlour, bicarbonateOfSoda, eggs, thaiChickenTenders
   beforeEach(() => {
     recipeInfo = recipeData[0];
     wheatFlour = new Ingredient(ingredientsData[0], recipeData[0].ingredients[0])
     bicarbonateOfSoda = new Ingredient(ingredientsData[1], recipeData[0].ingredients[1])
     eggs = new Ingredient(ingredientsData[2], recipeData[0].ingredients[2])
     recipe = new Recipe(recipeData[0], ingredientsData)
+    thaiChickenTenders = new Recipe(recipeData[8], ingredientsData)
   })
 
   it('should be an instance of Recipe', () => {
@@ -55,5 +56,15 @@ describe('Recipe', () => {
     let totalCost = recipe.getTotalCost()
 
     expect(totalCost).to.equal("$177.76")
+  })
+
+  it('should have no repeat ingredients', () => {
+    
+    expect(thaiChickenTenders.ingredients.length).to.equal(11)
+  })
+
+  it('should have amounts from repeat ingredients compiled into one ingredient', () => {
+    expect(thaiChickenTenders.ingredients[0].amount).to.equal(4)
+    expect(thaiChickenTenders.ingredients[10].amount).to.equal(1.5)
   })
 })

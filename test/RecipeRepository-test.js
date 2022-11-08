@@ -21,7 +21,7 @@ describe('RecipeRepository', () => {
     expect(recipeRepository.recipeList[0]).to.eql(recipe1)
     expect(recipeRepository.recipeList[1]).to.eql(recipe2)
     expect(recipeRepository.recipeList[2]).to.eql(recipe3)
-    expect(recipeRepository.recipeList.length).to.equal(8)
+    expect(recipeRepository.recipeList.length).to.equal(11)
   })
 
   it('should be able to return a random recipe of the day and hold it in a property', () => {

@@ -114,21 +114,7 @@ const testIngredients = [
     id: 20081,
     name: "wheat flour",
     estimatedCostInCents: 142,
-    amount: 5,
-    unit: "cups"
-  },
-  {
-    id: 20081,
-    name: "wheat flour",
-    estimatedCostInCents: 142,
-    amount: 5,
-    unit: "cups"
-  },
-  {
-    id: 20081,
-    name: "wheat flour",
-    estimatedCostInCents: 142,
-    amount: 5,
+    amount: 1.5,
     unit: "cups"
   },
   {
@@ -136,7 +122,7 @@ const testIngredients = [
     name: "bicarbonate of soda",
     estimatedCostInCents: 582,
     amount: 0.5,
-    unit: "teaspoons"
+    unit: "teaspoon"
   },
   {
     id: 1123,
@@ -2300,6 +2286,344 @@ const recipeData = [
       "appetizer",
       "antipasto",
       "hor d'oeuvre"
+    ]
+  },
+  {
+    "id": 779583,
+    "image": "https://spoonacular.com/recipeImages/779583-556x370.jpg",
+    "ingredients": [
+      {
+        "id": 19334,
+        "quantity": {
+          "amount": 1,
+          "unit": "tablespoon"
+        }
+      },
+      {
+        "id": 19334,
+        "quantity": {
+          "amount": 3,
+          "unit": "tablespoons"
+        }
+      },
+      {
+        "id": 4582,
+        "quantity": {
+          "amount": 1,
+          "unit": "tablespoon"
+        }
+      },
+      {
+        "id": 4582,
+        "quantity": {
+          "amount": 2,
+          "unit": "tablespoons"
+        }
+      },
+      {
+        "id": 1015062,
+        "quantity": {
+          "amount": 1,
+          "unit": "pound"
+        }
+      },
+      {
+        "id": 10011109,
+        "quantity": {
+          "amount": 4,
+          "unit": "cups"
+        }
+      },
+      {
+        "id": 10116098,
+        "quantity": {
+          "amount": 1,
+          "unit": "tablespoon"
+        }
+      },
+      {
+        "id": 2064,
+        "quantity": {
+          "amount": 0.25,
+          "unit": "cup"
+        }
+      },
+      {
+        "id": 2021,
+        "quantity": {
+          "amount": 1,
+          "unit": "teaspoon"
+        }
+      },
+      {
+        "id": 9160,
+        "quantity": {
+          "amount": 2,
+          "unit": "tablespoons"
+        }
+      },
+      {
+        "id": 9266,
+        "quantity": {
+          "amount": 1.25,
+          "unit": "cups"
+        }
+      },
+      {
+        "id": 16124,
+        "quantity": {
+          "amount": 1,
+          "unit": "tablespoon"
+        }
+      },
+      {
+        "id": 1016168,
+        "quantity": {
+          "amount": 0.5,
+          "unit": "tablespoon"
+        }
+      },
+      {
+        "id": 1016168,
+        "quantity": {
+          "amount": 1,
+          "unit": "tablespoon"
+        }
+      }
+    ],
+    "instructions": [
+      {
+        "instruction": "Prepare the chicken: In a large bowl, whisk together the brown sugar, ginger, oil, soy sauce, Sriracha and peanut butter.",
+        "number": 1
+      },
+      {
+        "instruction": "Add the chicken and toss to coat.",
+        "number": 2
+      },
+      {
+        "instruction": "Let marinate at room temperature for 15 minutes or cover and refrigerate for up to 6 hours. Preheat the oven broiler with a rack set 4-inches from the heat source. Line an 18x13-inch rimmed sheet pan with foil and spray with nonstick spray.",
+        "number": 3
+      },
+      {
+        "instruction": "Remove the chicken from the marinade, discarding excess marinade, and place on prepared pan, covering two-thirds of the pan and spacing evenly. Broil for 6 minutes.",
+        "number": 4
+      },
+      {
+        "instruction": "Remove the pan from the oven and spread pineapple on the remaining space on the pan. Sprinkle the pineapple with 1 tablespoon brown sugar. Broil for 3 to 5 minutes or until chicken is browned and no longer pink inside.",
+        "number": 5
+      },
+      {
+        "instruction": "Transfer the chicken to serving plates.",
+        "number": 6
+      },
+      {
+        "instruction": "Place the coleslaw mix in a medium bowl.",
+        "number": 7
+      },
+      {
+        "instruction": "Add the broiled pineapple, lime juice, oil, soy sauce and Sriracha; toss to coat. Divide among the plates with the chicken and sprinkle the slaw with mint or basil.",
+        "number": 8
+      }
+    ],
+    "name": "Thai Chicken Tenders with Broiled Pineapple Slaw",
+    "tags": [
+      "lunch",
+      "main course",
+      "main dish",
+      "dinner"
+    ]
+  },
+  {
+    "id": 988243,
+    "image": "https://spoonacular.com/recipeImages/988243-556x370.jpg",
+    "ingredients": [
+      {
+        "id": 1002030,
+        "quantity": {
+          "amount": 0.25,
+          "unit": "teaspoon"
+        }
+      },
+      {
+        "id": 1001,
+        "quantity": {
+          "amount": 4,
+          "unit": "tablespoons"
+        }
+      },
+      {
+        "id": 11297,
+        "quantity": {
+          "amount": 0.25,
+          "unit": "cup"
+        }
+      },
+      {
+        "id": 11215,
+        "quantity": {
+          "amount": 6,
+          "unit": "cloves"
+        }
+      },
+      {
+        "id": 1032009,
+        "quantity": {
+          "amount": 1,
+          "unit": "pinch"
+        }
+      },
+      {
+        "id": 2047,
+        "quantity": {
+          "amount": 0.5,
+          "unit": "teaspoon"
+        }
+      },
+      {
+        "id": 15152,
+        "quantity": {
+          "amount": 2,
+          "unit": "pounds"
+        }
+      },
+      {
+        "id": 11294,
+        "quantity": {
+          "amount": 0.25,
+          "unit": "medium"
+        }
+      }
+    ],
+    "instructions": [
+      {
+        "instruction": "Melt butter to a large skillet over medium heat. As the butter melts, it will begin to foam as it transitions from a bright, lemon-yellow color to golden and then finally to a nutty-brown color. As the butter just begins to turn nutty-brown from golden, reduce your heat to medium-low and carefully toss in your garlic and onion. Cook until the onion just begins to become tender and then add in your shrimp. Stirring frequently, cook until the shrimp turn pink and lose their translucence.",
+        "number": 1
+      },
+      {
+        "instruction": "Stir in salt, black pepper, red pepper flakes and fresh parsley. Toss shrimp to make sure all are well-coated.",
+        "number": 2
+      },
+      {
+        "instruction": "Remove from heat and serve.",
+        "number": 3
+      }
+    ],
+    "name": "Brown Butter Garlic Shrimp",
+    "tags": [
+      "lunch",
+      "main course",
+      "main dish",
+      "dinner"
+    ]
+  },
+  {
+    "id": 670408,
+    "image": "https://spoonacular.com/recipeImages/670408-556x370.jpg",
+    "ingredients": [
+      {
+        "id": 93828,
+        "quantity": {
+          "amount": 0.5,
+          "unit": "cup"
+        }
+      },
+      {
+        "id": 11266,
+        "quantity": {
+          "amount": 16,
+          "unit": "ounces"
+        }
+      },
+      {
+        "id": 1017,
+        "quantity": {
+          "amount": 4,
+          "unit": "ounces"
+        }
+      },
+      {
+        "id": 1019,
+        "quantity": {
+          "amount": 0.5,
+          "unit": "cup"
+        }
+      },
+      {
+        "id": 1022020,
+        "quantity": {
+          "amount": 0.25,
+          "unit": "teaspoon"
+        }
+      },
+      {
+        "id": 1022027,
+        "quantity": {
+          "amount": 1,
+          "unit": "teaspoon"
+        }
+      },
+      {
+        "id": 1082047,
+        "quantity": {
+          "amount": 0.25,
+          "unit": "teaspoon"
+        }
+      },
+      {
+        "id": 1082047,
+        "quantity": {
+          "amount": 0.25,
+          "unit": "teaspoon"
+        }
+      },
+      {
+        "id": 4053,
+        "quantity": {
+          "amount": 2,
+          "unit": "tablespoons"
+        }
+      },
+      {
+        "id": 1033,
+        "quantity": {
+          "amount": 0.25,
+          "unit": "cup"
+        }
+      },
+      {
+        "id": 1032009,
+        "quantity": {
+          "amount": 0.25,
+          "unit": "teaspoon"
+        }
+      },
+      {
+        "id": 10011457,
+        "quantity": {
+          "amount": 8,
+          "unit": "ounces"
+        }
+      }
+    ],
+    "instructions": [
+      {
+        "instruction": "Preheat oven to 350 degrees F. First, remove the mushroom stems by pushing each one toward you, then away from you. It will pop right out. (Save them to add to another recipe.) Swish and rub the mushroom tops in a large bowl of cold water to get them clean. Then, lay them open side down on a kitchen towel to dry.While the mushrooms dry, mix together the cream cheese, spinach, artichoke hearts, parmesan, garlic powder, 1/2 tsp. kosher salt, and red pepper flakes.In a small bowl, stir together olive oil, 1/4 tsp. salt, and Italian seasoning. Use a basting brush or your fingers to lightly rub the outside of the mushrooms with the oil mixture.",
+        "number": 1
+      },
+      {
+        "instruction": "Place the mushrooms open side up on a baking sheet. Use a small disher or spoon to place a heaping scoop of dip mixture into each mushroom, pressing it down to make sure it fills the opening. Press a small amount of feta cheese on top of each stuffed mushroom.",
+        "number": 2
+      },
+      {
+        "instruction": "Bake in preheated oven for 20-25 minutes until filling is hot and bubbly and feta is starting to brown. Mushrooms will drain some brown liquid during cooking, so drain on paper towels before serving if you don't want that liquid on your serving plate. These taste just as good even after they have cooled down!",
+        "number": 3
+      }
+    ],
+    "name": "Artichoke Spinach Dip Stuffed Mushrooms",
+    "tags": [
+      "condiment",
+      "dip",
+      "spread"
     ]
   }
 ]

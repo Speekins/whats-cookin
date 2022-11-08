@@ -1,9 +1,7 @@
 import User from '../src/classes/User'
 import Recipe from '../src/classes/Recipe'
 import RecipeRepository from '../src/classes/RecipeRepository'
-import ingredientsData from '../src/data/ingredients'
-import recipeData from '../src/data/recipes'
-import { testComparison, testPantry, usersData } from '../src/data/testData'
+import { testComparison, testPantry, usersData, recipeData, ingredientsData } from '../src/data/testData'
 import { expect } from 'chai'
 
 describe('User', () => {
@@ -34,8 +32,22 @@ describe('User', () => {
 
   it('should have a list of favorite recipes', () => {
     user.addRecipeToFavorites(recipe)
+    user.addRecipeToFavorites(recipe2)
     
+    expect(user.favoriteRecipes.length).to.equal(2)
     expect(user.favoriteRecipes[0]).to.eql(recipe)
+    expect(user.favoriteRecipes[1]).to.eql(recipe2)
+  })
+
+  it('should be able to remove recipe from favorites', () => {
+    user.addRecipeToFavorites(recipe)
+    user.addRecipeToFavorites(recipe2)
+
+    user.removeRecipeFromFavorites(recipe.id)
+    expect(user.favoriteRecipes[0]).to.eql(recipe2)
+
+    user.removeRecipeFromFavorites(recipe2.id)
+    expect(user.favoriteRecipes).to.eql([])
   })
 
   it('should have properly formatted ingredients', () => {
