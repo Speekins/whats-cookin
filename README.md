@@ -4,12 +4,12 @@
 ![updated-allrec](https://user-images.githubusercontent.com/110144802/200438259-1e561d48-30fd-4236-afa4-557df75102d1.gif)
 
 ### My Recipes View
-![updatedmyrec](https://user-images.githubusercontent.com/110144802/200438268-e05c23e5-e699-4e39-8fa1-f92f7846d088.gif)
+![updated-myrecipe](https://user-images.githubusercontent.com/110144802/200620308-f178d2a1-9e1a-497a-971c-735e503ebe4e.gif)
 
 ### Abstract
 Our fully remote team created a recipe site that presents users with an array of recipe cards which they can filter and search through by the type of recipe they are looking for while saving recipes to their "My Recipes" view. When viewing a recipe, users will be informed if they have the required ingredients in their pantry with the option to add them. There is a "My Recipes" view where users can review their bookmarked recipes and add any needed ingredients to their pantry. Users will find the site to be thoughtfully-designed, intuitive, and responsive to various screen sizes. 
 
-This team project took place in the second term of the Turing front-end software engineering program and required students to synthesize all the technical and project management skills we have honed over the past weeks to create a fully functioning site from the design phase to production in two weeks. This project required extensive research to determine and implement new technologies to make the product surpass expectations.
+This team project took place in the second term of the Turing front-end software engineering program and required students to synthesize all the technical and project management skills we have honed over the past weeks to create a fully functioning site from the design phase to production in four weeks. This project required extensive research to determine and implement new technologies to make the product surpass expectations.
 
 ### Feature Spotlight
 In order to provide users with an expanded view of any recipe, we researched and determined MicroModal.js to be the best solution. We successfully implemented MicroModal as seen in the above gif. Users are able to see in red and green which ingredients they will need to add before cooking the selected recipe. This view is dynamic and guides the user if they are able to proceed with cooking the selected recipe—thus removing those ingredients from their pantry—or if they still need to add more ingredients beforehand.
