@@ -3,8 +3,6 @@ import Ingredient from '../src/classes/Ingredient'
 import { ingredientsData, recipeData } from '../src/data/testData'
 import { expect } from 'chai'
 
-console.log(recipeData.length)
-
 describe('Recipe', () => {
   let recipeInfo, recipe, wheatFlour, bicarbonateOfSoda, eggs, thaiChickenTenders
   beforeEach(() => {

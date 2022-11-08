@@ -122,7 +122,7 @@ const testIngredients = [
     name: "bicarbonate of soda",
     estimatedCostInCents: 582,
     amount: 0.5,
-    unit: "teaspoons"
+    unit: "teaspoon"
   },
   {
     id: 1123,
