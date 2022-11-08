@@ -199,12 +199,17 @@ td {
 #table-button-add {
   background: none;
   color: inherit;
-  border: none;
-  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 2px 5px;
   font: inherit;
   cursor: pointer;
   outline: inherit;
   margin-left: 10px;
+}
+
+#table-button-add:focus {
+  border: 2px solid #c84b31;
 }
 
 th {
