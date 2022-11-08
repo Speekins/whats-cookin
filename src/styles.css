@@ -10,6 +10,10 @@ body {
   height: 100vh;
 }
 
+label {
+  display: none;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -187,7 +191,7 @@ td {
   border-bottom: 2px solid #c84b31;
 }
 
-#table-select {
+.table-select {
   width: 50%;
   padding: 2px;
 }
@@ -195,12 +199,17 @@ td {
 #table-button-add {
   background: none;
   color: inherit;
-  border: none;
-  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 2px 5px;
   font: inherit;
   cursor: pointer;
   outline: inherit;
   margin-left: 10px;
+}
+
+#table-button-add:focus {
+  border: 2px solid #c84b31;
 }
 
 th {
@@ -262,7 +271,7 @@ th {
   padding: 2vh;
 }
 
-.special-tag p {
+.special-tag h2 {
   margin: 2px;
   font-size: max(1.2vw, 10px);
 }
@@ -319,7 +328,7 @@ th {
   transition-duration: 200ms;
 }
 
-.recipe-tile>h4 {
+.recipe-tile>p {
   flex-basis: 20%;
   font-family: 'Work Sans', sans-serif;
   color: #161616;
@@ -492,7 +501,7 @@ select:focus {
   font-family: 'Libre Baskerville', serif;
   font-size: .8em;
   list-style: none;
-  color: rgb(200, 75, 49);
+  color: #B6381E;
   background-color: rgba(0, 0, 0, 0);
   border: 5px solid rgb(200, 75, 49);
   margin: 5px 10px;
@@ -524,7 +533,7 @@ select:focus {
 
 .modal-icon-label {
   font-family: 'Libre Baskerville', serif;
-  font-size: 0.6em;
+  font-size: 0.7em;
   padding: 15px 12px 12px 10px;
 }
 
@@ -559,7 +568,7 @@ select:focus {
 }
 
 .user-has {
-  color: #438b6c;
+  color: #30674f;
 }
 
 .user-has::after {
@@ -570,7 +579,7 @@ select:focus {
 }
 
 .user-needs {
-  color: rgb(200, 75, 49);
+  color: #B6381E;
 }
 
 .user-needs::after {

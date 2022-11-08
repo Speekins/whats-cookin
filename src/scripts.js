@@ -44,8 +44,6 @@ const pantryParent = document.querySelector('.pantry-parent')
 const logoImage = document.getElementById('logo')
 const modalCookButton = document.getElementById("modal-cook-button")
 const table = document.querySelector('table')
-const tableSelect = document.querySelector('#table-select')
-const tableButtonAdd = document.querySelector('#table-button-add')
 let filter = document.getElementById('filter')
 let tileNodes = allRecipesContainer.childNodes
 
@@ -251,13 +249,13 @@ function displayWelcomeMessage() {
 
 function createRecipeTile(recipe) {
   allRecipesContainer.innerHTML +=
-    `<div class="recipe-tile" id=${recipe.id}>
+    `<li class="recipe-tile" id=${recipe.id}>
       <div class="tile-image" style="background-image: url(${recipe.image})" alt="${recipe.name}">
         <img class="tile-bookmarks bookmark-nodes" id=${recipe.id} src="./images/bookmark-tiles-unsaved.png" aria-label="bookmark ${recipe.name}">
       </div>
       <h3 tabindex="0">${recipe.name}</h3>
-      <h4>${recipe.tags.join(', ')}</h4>
-    </div>`
+      <p>${recipe.tags.join(', ')}</p>
+    </li>`
 }
 
 function displayRecipeTiles(recipeArray) {
@@ -561,7 +559,8 @@ function displayPantryView() {
         <td id="table-col-name">${pantryItem.name}</td>
         <td id="table-col-quantity">${pantryItem.amount}</td>
         <td id="table-col-select">
-          <select id="table-select">
+          <label for="table-select-${pantryItem.id}">select amount of ${pantryItem.name} to add</label>
+          <select class="table-select" id="table-select-${pantryItem.id}">
             <option>0</option>
             <option>1</option>
             <option>5</option>

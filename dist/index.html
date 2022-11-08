@@ -18,17 +18,17 @@
   <header>
     <nav class="nav-bar-container">
       <div class="header-left-align">
+        <label for="search-bar">search recipes by name or ingredient</label>
         <input type="search" placeholder="Search..." class="search-bar" id="search-bar">
       </div>
-      <div class="header-right-align">
+      <div class="header-right-align" role="tablist">
         <div class="welcome-message"></div>
         <div class="header-buttons my-recipes-button" id="my-recipes" tabindex="0" aria-label="go to my recipes view" aria-selected="false" role="tab">My Recipes</div>
         <div class="header-buttons all-recipes-button selected-view" id="all-recipes" tabindex="0" aria-label="go to all recipes view" aria-selected="true" role="tab">All Recipes</div>
-
       </div>
     </nav>
   </header>
-  <section class="below-header-container">
+  <section class="below-header-container" role="tabpanel">
     <section class="banner">
       <img src="./images/whats-cookin-logo.png" id="logo" alt="what's cookin' logo">
       <div id="featured-recipe-parent" class="featured-recipe-parent">
@@ -39,15 +39,14 @@
           <div class="special-tag" id="special-tag">
             <img class="featured-bookmark-icon bookmark-nodes" src="./images/bookmark-tiles-unsaved.png"
               alt="save featured recipe">
-            <p>Recipe</p>
-            <p>Featured</p>
+            <h2>Featured<br>Recipe</h2>
           </div>
         </div>
       </div>
       <div class="pantry-parent hidden">
         <div class="pantry-container">
           <div class="pantry-text-container">
-            <h2>My pantry</h2>
+            <h2>My Pantry</h2>
           </div>
           <div class="ingredient-container">
             <table>
@@ -58,17 +57,19 @@
       </div>
     </section>
     <nav class="filter-bar">
+      <label for="filter">filter recipes by type</label>
       <select class="filter" id="filter" role="menubar">
-        <option>Filter recipes by type...</option>
+        <option role="menuitem">Filter recipes by type...</option>
       </select>
       <button class="filter-clear-button disabled" id="filter-clear-button" disabled>clear filter</button>
     </nav>
-    <section class="all-recipes-container">
-    </section>
+    <ul class="all-recipes-container">
+      <!-- innerHTML for recipe tiles will go here -->
+    </ul>
   </section>
   <div class="modal" id="modal-1" aria-hidden="true">
     <div class="modal-grandparent" tabindex="-1">
-      <div class="modal-parent" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+      <div class="modal-parent" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div class="close-modal-btn-container">
           <button class="close-modal-btn" id="close-modal-button" aria-label="Close modal">close</button>
         </div>
@@ -81,7 +82,7 @@
           </div>
           <h1 id="modal-title"></h1>
           <nav class="modal-bookmark-nav">
-            <img tabindex="0" class="modal-bookmark-icon" id="modal-save-recipe" src="./images/bookmark-unsaved.png">
+            <img tabindex="0" class="modal-bookmark-icon" id="modal-save-recipe" src="./images/bookmark-unsaved.png" alt="bookmark icon">
             <p class="modal-icon-label">add to<br>
               My Recipes</p>
             <button id="modal-cook-button"></button>
