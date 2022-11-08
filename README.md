@@ -1,9 +1,9 @@
 # What's Cookin'? Project
 
-### All Recipes view
+### All Recipes View
 ![updated-allrec](https://user-images.githubusercontent.com/110144802/200438259-1e561d48-30fd-4236-afa4-557df75102d1.gif)
 
-### My Recipes view
+### My Recipes View
 ![updatedmyrec](https://user-images.githubusercontent.com/110144802/200438268-e05c23e5-e699-4e39-8fa1-f92f7846d088.gif)
 
 ### Abstract
