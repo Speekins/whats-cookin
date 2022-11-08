@@ -35,6 +35,15 @@ describe('User', () => {
   it('should have a list of favorite recipes', () => {
     user.addRecipeToFavorites(recipe)
     user.addRecipeToFavorites(recipe2)
+    
+    expect(user.favoriteRecipes.length).to.equal(2)
+    expect(user.favoriteRecipes[0]).to.eql(recipe)
+    expect(user.favoriteRecipes[1]).to.eql(recipe2)
+  })
+
+  it('should be able to remove recipe from favorites', () => {
+    user.addRecipeToFavorites(recipe)
+    user.addRecipeToFavorites(recipe2)
 
     user.removeRecipeFromFavorites(recipe.id)
     expect(user.favoriteRecipes[0]).to.eql(recipe2)
@@ -43,12 +52,7 @@ describe('User', () => {
     expect(user.favoriteRecipes).to.eql([])
   })
 
-  it('should be able to remove recipe from favorites', () => {
-    user.addRecipeToFavorites(recipe)
-    
-    expect(user.favoriteRecipes[0]).to.eql(recipe)
-  })
-
+  
   it('should have properly formatted ingredients', () => {
     for (let i = 0; i < user.pantry; i++) {
       let ingredient = user.pantry[i]
