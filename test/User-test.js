@@ -52,7 +52,6 @@ describe('User', () => {
     expect(user.favoriteRecipes).to.eql([])
   })
 
-  
   it('should have properly formatted ingredients', () => {
     for (let i = 0; i < user.pantry; i++) {
       let ingredient = user.pantry[i]
