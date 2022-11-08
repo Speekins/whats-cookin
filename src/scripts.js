@@ -47,6 +47,10 @@ const table = document.querySelector('table')
 let filter = document.getElementById('filter')
 let tileNodes = allRecipesContainer.childNodes
 
+// ---------------------------ARIA ATTRIBUTES---------------------------
+const myRecipesAttr = myRecipesButton.getAttribute("aria-expanded")
+const allRecipesAttr = myRecipesButton.getAttribute("aria-expanded")
+
 // ---------------------------UTILITY FUNCTIONS---------------------------
 
 function fetchData(urls) {
@@ -102,6 +106,13 @@ function initUser() {
 
 // ---------------------------EVENT LISTENERS---------------------------
 
+document.addEventListener('keypress', event => {
+  if(event.key === "Enter") {
+    event.preventDefault()
+    event.target.click()
+  }
+})
+
 filterClearButton.addEventListener('click', clearFilterByTag)
 
 window.addEventListener('load', () => {
@@ -121,7 +132,6 @@ allRecipesContainer.addEventListener("click", event => {
       removeTileFromDisplay(event)
     }
   }
-
   let targetObject = recipeRepository.recipeList.find(recipe => recipe.id == event.target.parentNode.id)
   displayModal(targetObject)
 })
@@ -243,7 +253,7 @@ function createRecipeTile(recipe) {
       <div class="tile-image" style="background-image: url(${recipe.image})" alt="${recipe.name}">
         <img class="tile-bookmarks bookmark-nodes" id=${recipe.id} src="./images/bookmark-tiles-unsaved.png" aria-label="bookmark ${recipe.name}">
       </div>
-      <h3>${recipe.name}</h3>
+      <h3 tabindex="0">${recipe.name}</h3>
       <p>${recipe.tags.join(', ')}</p>
     </li>`
 }
@@ -255,9 +265,11 @@ function displayRecipeTiles(recipeArray) {
 
 function makeViewButtonActive(button) {
   if (button === allRecipesButton) {
+    ariaSelectedToggleAllRecipes()
     myRecipesButton.classList.remove('selected-view')
     allRecipesButton.classList.add('selected-view')
   } else {
+    ariaSelectedToggleMyRecipes()
     myRecipesButton.classList.add('selected-view')
     allRecipesButton.classList.remove('selected-view')
   }
@@ -280,6 +292,16 @@ function displayMyRecipes() {
   displayRecipeTiles(user.favoriteRecipes)
   updateBookmarks()
   showPantry()
+}
+
+function ariaSelectedToggleMyRecipes() {
+  myRecipesButton.setAttribute("aria-selected", true)
+  allRecipesButton.setAttribute("aria-selected", false)
+}
+
+function ariaSelectedToggleAllRecipes() {
+  myRecipesButton.setAttribute("aria-selected", false)
+  allRecipesButton.setAttribute("aria-selected", true)
 }
 
 function removeTileFromDisplay(event) {

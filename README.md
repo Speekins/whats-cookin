@@ -1,13 +1,18 @@
 # What's Cookin'? Project
-![updated-gif2](https://user-images.githubusercontent.com/110144802/197660748-5159af50-94ee-41e9-87cb-f0784e46272d.gif)
+
+### All recipes view
+![updated-allrec](https://user-images.githubusercontent.com/110144802/200438259-1e561d48-30fd-4236-afa4-557df75102d1.gif)
+
+### My recipes view
+![updatedmyrec](https://user-images.githubusercontent.com/110144802/200438268-e05c23e5-e699-4e39-8fa1-f92f7846d088.gif)
 
 ### Abstract
-Our fully remote team created a recipe site that presents users with an array of recipe cards which they can filter and search through by the type of recipe they are looking for while saving recipes to their favorites view. Users will find the site to be thoughtfully-designed, intuitive, and responsive to all screen sizes. 
+Our fully remote team created a recipe site that presents users with an array of recipe cards which they can filter and search through by the type of recipe they are looking for while saving recipes to their "My recipes" view. When viewing a recipe, users will be informed if they have the required ingredients in their pantry with the option to add them. There is a "My recipes" view where users can review their bookmarked recipes and add any needed ingredients into their pantry. Users will find the site to be thoughtfully-designed, intuitive, and responsive to various screen sizes. 
 
 This team project took place in the second term of the Turing software engineering program and required students to synthesize all the technical and project management skills we have honed over the past weeks to create a fully functioning site from the design phase to production in two weeks. This project required extensive research to determine and implement new technologies to make the product surpass expectations. 
 
 ### Feature Spotlight
-In order to provide users with an expanded view of any recipe we researched and determined Micromodal.js to be the best solution. We successfully implemented the micromodal as seen in the above gif. 
+In order to provide users with an expanded view of any recipe we researched and determined Micromodal.js to be the best solution. We successfully implemented Micromodal as seen in the above gif. Users are able to see in red and green which ingredients they will need to add before cooking the selected recipe. This view is dynamic and guides the user if they are able to proceed with cooking the selected recipe thus removing those ingredients from their pantry or if they still need to add more ingredients beforehand.
 
 ### Contributors
 [Spencer Haka](https://github.com/Speekins)\
@@ -32,6 +37,7 @@ Agile/Scrum project board we created and managed in Github:
 ### Technologies
 - MicroModal.js 3rd party library
 - Fetch API 
+- Lighthouse and Wave 
 - Webpack module bundler 
 - Git
 - GitHub 
@@ -45,7 +51,10 @@ Agile/Scrum project board we created and managed in Github:
 - Excalidraw 
 
 ### Methodologies
-- Design the UI to adapt to various screen sizes 
+- Design the UI to adapt to various screen sizes
+- Test driven development 
+- Error handling 
+- Ensure accessiblity through WAI ARIA states, roles, and properties 
 - Implement ES6 classes which support a complex data model
 - Use object and array prototype methods to perform data manipulation
 - Create a user interface that is easy to use and clearly displays information.
