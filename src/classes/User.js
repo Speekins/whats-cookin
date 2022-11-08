@@ -1,6 +1,3 @@
-const ingredientsData = require("../data/ingredients")
-const recipeData = require("../data/recipes")
-
 class User {
   constructor(user, allIngredients) {
     this.favoriteRecipes = []
