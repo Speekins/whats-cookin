@@ -1,9 +1,7 @@
 import User from '../src/classes/User'
 import Recipe from '../src/classes/Recipe'
 import RecipeRepository from '../src/classes/RecipeRepository'
-import ingredientsData from '../src/data/ingredients'
-import recipeData from '../src/data/recipes'
-import { testComparison, testPantry, usersData } from '../src/data/testData'
+import { testComparison, testPantry, usersData, recipeData, ingredientsData } from '../src/data/testData'
 import { expect } from 'chai'
 
 describe('User', () => {
